@@ -1,12 +1,12 @@
-import ToDo from '../ToDo/ToDo'
-import './App.css'
+import ToDo from "../ToDo/ToDo";
+import "./App.css";
 
 function App() {
   return (
     <>
-      <ToDo/>
+      <ToDo mostraMenu={true} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

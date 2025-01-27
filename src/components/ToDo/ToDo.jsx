@@ -36,10 +36,16 @@ function ToDo() {
     e.preventDefault()
   }
 
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      adicionaTarefa();
+    }
+  };
+
   return (
     <div className='todo-container'>
       <div className='input-container'>
-        <input type="text" value={tarefa} onChange={handleChange}/>
+        <input type="text" value={tarefa} onChange={handleChange} onKeyDown={handleKeyDown}/>
         <button onClick={adicionaTarefa}>➕</button>
       </div>
       <div className='tasks-container'>

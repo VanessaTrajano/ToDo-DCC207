@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Task from '../Task/Task'
 import "./ToDo.css";
+import TaskConcluida from '../TaskConcluida/TaskConcluida';
 
 function ToDo() {
   const [tarefa, setTarefa] = useState("");
@@ -50,7 +51,8 @@ function ToDo() {
       </div>
       <div className='tasks-container'>
         {lista.map(item => {
-          return <Task key={item.id} titulo={item.task} funcaoCheck={() => marcarComoConcluida(item.id)} funcaoClick={() => removerTarefa(item.id)}/>
+          // return <Task key={item.id} titulo={item.task} funcaoCheck={() => marcarComoConcluida(item.id)} funcaoClick={() => removerTarefa(item.id)}/>
+          return <TaskConcluida key={item.id} titulo={item.task}/>
         })}
       </div>
     </div>

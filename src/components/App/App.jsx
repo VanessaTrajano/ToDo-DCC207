@@ -1,10 +1,12 @@
-import ToDo from "../ToDo/ToDo";
+// import ToDo from "../ToDo/ToDo";
+import Header from "../Header/Header";
 import "./App.css";
 
 function App() {
   return (
     <>
-      <ToDo mostraMenu={true} />
+      <Header />
+      {/* <ToDo mostraMenu={true} /> */}
     </>
   );
 }

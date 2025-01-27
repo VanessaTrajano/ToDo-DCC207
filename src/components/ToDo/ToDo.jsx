@@ -13,8 +13,13 @@ function ToDo() {
     )))
   }
 
-  const handleCheck = () => {
-    window.alert("Check!")
+  const marcarComoConcluida = (id) => {
+    setListaConcluida(listaConcluida.concat(lista.filter((item) => (
+      item.id == id
+    ))))
+    setLista(lista.filter((item) => (
+      item.id != id
+    )))
   }
 
   const handleChange = (e) => {
@@ -39,7 +44,7 @@ function ToDo() {
       </div>
       <div>
         {lista.map(item => {
-          return <Task key={item.id} titulo={item.task} funcaoCheck={handleCheck} funcaoClick={() => removerTarefa(item.id)}/>
+          return <Task key={item.id} titulo={item.task} funcaoCheck={() => marcarComoConcluida(item.id)} funcaoClick={() => removerTarefa(item.id)}/>
         })}
       </div>
     </div>

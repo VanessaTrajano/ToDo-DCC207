@@ -37,12 +37,12 @@ function ToDo() {
   }
 
   return (
-    <div>
-      <div>
+    <div className='todo-container'>
+      <div className='input-container'>
         <input type="text" value={tarefa} onChange={handleChange}/>
         <button onClick={adicionaTarefa}>➕</button>
       </div>
-      <div>
+      <div className='tasks-container'>
         {lista.map(item => {
           return <Task key={item.id} titulo={item.task} funcaoCheck={() => marcarComoConcluida(item.id)} funcaoClick={() => removerTarefa(item.id)}/>
         })}

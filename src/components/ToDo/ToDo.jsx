@@ -1,8 +1,9 @@
 import { useState } from "react";
 import Task from "../Task/Task";
+import TaskConcluida from "../TaskConcluida/TaskConcluida";
 import "./ToDo.css";
 
-function ToDo() {
+function ToDo({ mostraMenu }) {
   const [tarefa, setTarefa] = useState("");
   const [lista, setLista] = useState([]);
   const [listaConcluida, setListaConcluida] = useState([]);
@@ -42,27 +43,38 @@ function ToDo() {
 
   return (
     <div className="todo-container">
-      <div className="input-container">
-        <input
-          type="text"
-          value={tarefa}
-          onChange={handleChange}
-          onKeyDown={handleKeyDown}
-        />
-        <button onClick={adicionaTarefa}>➕</button>
-      </div>
-      <div className="tasks-container">
-        {lista.map((item) => {
-          return (
-            <Task
-              key={item.id}
-              titulo={item.task}
-              funcaoCheck={() => marcarComoConcluida(item.id)}
-              funcaoClick={() => removerTarefa(item.id)}
+      {mostraMenu ? (
+        <>
+          <div className="input-container">
+            <input
+              type="text"
+              value={tarefa}
+              onChange={handleChange}
+              onKeyDown={handleKeyDown}
             />
-          );
-        })}
-      </div>
+            <button onClick={adicionaTarefa}>➕</button>
+          </div>
+          <div className="tasks-container">
+            {lista.map((item) => {
+              return (
+                <Task
+                  key={item.id}
+                  titulo={item.task}
+                  funcaoCheck={() => marcarComoConcluida(item.id)}
+                  funcaoClick={() => removerTarefa(item.id)}
+                />
+              );
+            })}
+          </div>
+        </>
+      ) : (
+        <div className="tasks-container">
+          <h1>Tarefas Concluídas</h1>
+          {listaConcluida.map((item) => {
+            return <TaskConcluida key={item.id} titulo={item.task} />;
+          })}
+        </div>
+      )}
     </div>
   );
 }

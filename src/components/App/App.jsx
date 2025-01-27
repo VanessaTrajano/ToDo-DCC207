@@ -4,7 +4,7 @@ import "./App.css";
 function App() {
   return (
     <>
-      <ToDo />
+      <ToDo mostraMenu={false} />
     </>
   );
 }

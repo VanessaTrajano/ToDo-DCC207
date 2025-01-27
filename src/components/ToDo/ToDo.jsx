@@ -6,8 +6,10 @@ function ToDo() {
   const [tarefa, setTarefa] = useState("");
   const [lista, setLista] = useState([]);
 
-  const handleClick = () =>{
-    window.alert("Clicou")
+  const removerTarefa = (id) =>{
+    setLista(lista.filter((item) => (
+      item.id != id
+    )))
   }
 
   const handleCheck = () => {
@@ -37,7 +39,7 @@ function ToDo() {
       </div>
       <div>
         {lista.map(item => {
-          return <Task key={item.id} titulo={item.task} funcaoCheck={handleCheck} funcaoClick={handleClick}/>
+          return <Task key={item.id} titulo={item.task} funcaoCheck={handleCheck} funcaoClick={() => removerTarefa(item.id)}/>
         })}
       </div>
     </div>

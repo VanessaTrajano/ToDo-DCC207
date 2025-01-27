@@ -9,14 +9,14 @@ function ToDo({ mostraMenu }) {
   const [listaConcluida, setListaConcluida] = useState([]);
 
   const removerTarefa = (id) => {
-    setLista(lista.filter((item) => item.id != id));
+    setLista(lista.filter((item) => item.id !== id));
   };
 
   const marcarComoConcluida = (id) => {
     setListaConcluida(
-      listaConcluida.concat(lista.filter((item) => item.id == id))
+      listaConcluida.concat(lista.filter((item) => item.id === id))
     );
-    setLista(lista.filter((item) => item.id != id));
+    setLista(lista.filter((item) => item.id !== id));
   };
 
   const handleChange = (e) => {
@@ -24,6 +24,7 @@ function ToDo({ mostraMenu }) {
   };
 
   const adicionaTarefa = (e) => {
+    if(tarefa.trim() === "") return;
     setLista(
       lista.concat({
         task: tarefa,
@@ -37,7 +38,8 @@ function ToDo({ mostraMenu }) {
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
-      adicionaTarefa();
+      e.preventDefault();
+      adicionaTarefa(e);
     }
   };
 
@@ -52,7 +54,7 @@ function ToDo({ mostraMenu }) {
               onChange={handleChange}
               onKeyDown={handleKeyDown}
             />
-            <button onClick={adicionaTarefa}>➕</button>
+            <button onClick={adicionaTarefa} aria-label="Adicionar Tarefa">➕</button>
           </div>
           <div className="tasks-container">
             {lista.map((item) => {

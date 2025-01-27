@@ -3,7 +3,7 @@ import './ToDo.css'
 function ToDo() {
     return (
       <>
-        Funciona!
+        ToDo funciona!
       </>
     )
 }

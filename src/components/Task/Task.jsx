@@ -3,7 +3,7 @@ import './Task.css'
 function Task() {
     return (
       <>
-        Funciona!
+        Task funciona!
       </>
     )
 }

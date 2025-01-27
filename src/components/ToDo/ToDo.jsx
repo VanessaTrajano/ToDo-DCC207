@@ -5,6 +5,7 @@ import "./ToDo.css";
 function ToDo() {
   const [tarefa, setTarefa] = useState("");
   const [lista, setLista] = useState([]);
+  const [listaConcluida, setListaConcluida] = useState([]);
 
   const removerTarefa = (id) =>{
     setLista(lista.filter((item) => (
@@ -24,7 +25,6 @@ function ToDo() {
     setLista(lista.concat({
       task: tarefa,
       id: Date.now(),
-      done: false
     }))
     setTarefa("")
 

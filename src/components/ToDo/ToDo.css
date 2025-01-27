@@ -1,0 +1,36 @@
+.todo-container{
+    background-color: blue;
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    .input-container{
+        width: 25%;
+        height: 4vh;
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 20px;
+
+        input{
+            height: 100%;
+            width: 80%;
+        }
+
+        button{
+            width: 4vh;
+            
+        }
+    }
+
+    .tasks-container{
+        background-color: green;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

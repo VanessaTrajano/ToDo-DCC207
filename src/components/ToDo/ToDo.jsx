@@ -36,7 +36,9 @@ function ToDo() {
         <button onClick={adicionaTarefa}>➕</button>
       </div>
       <div>
-        <Task titulo={"Task 1"} funcaoCheck={handleCheck} funcaoClick={handleClick}/>
+        {listay.map(item => {
+          return <Task key={item.id} titulo={item.task} funcaoCheck={handleCheck} funcaoClick={handleClick}/>
+        })}
       </div>
     </div>
   );

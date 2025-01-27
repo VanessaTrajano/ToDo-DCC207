@@ -1,10 +1,12 @@
 import './Task.css'
 
-function Task() {
+function Task({titulo, funcaoCheck, funcaoClick}) {
     return (
-      <>
-        Task funciona!
-      </>
+      <div className='task-container'>
+        <input type="checkbox" name="concluido" id="concluido-taskX" onClick={funcaoCheck}/>
+        <span>{titulo}</span>
+        <button onClick={funcaoClick}>🗑</button>
+      </div>
     )
 }
 

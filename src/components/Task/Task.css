@@ -1,0 +1,31 @@
+.task-container{
+    width: 20%;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.5rem;
+
+    input{
+        transform: scale(2);
+    }
+
+    button{
+        height: 100%;
+        width: 40px;
+        background-color: #222;
+        border-radius: 30%;
+        color: red;
+        border: none;
+        font-size: 1.9rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover{
+            background-color: red;
+            color: #222;
+            box-shadow: 2px 2px 5px black;
+        }
+    }
+}

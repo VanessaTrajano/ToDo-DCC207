@@ -1,5 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Agu+Display&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Agu Display", serif;
+    color: #2E7D32;
+}
+
+body{
+    background-color:  #80CBC4;
 }

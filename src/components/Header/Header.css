@@ -1,13 +1,12 @@
 .header-container{
-    background-color: red;
+    background-color:  #E8F5E9;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 30px;
-    height: 7vh;
+    height: 10vh;
 
     .header-nav{
-        background-color: yellow;
         width: 50%;
         height: 100%;
         font-size: 1.5rem;
@@ -21,12 +20,14 @@
             height: 100%;
 
             li{
-                background-color: purple;
+                background-color: #2E7D32;
                 padding: 8px 18px;
                 border-radius: 20px;
+                color: #E8F5E9;
 
                 &:hover{
-                    box-shadow: 2px 2px 5px plum;
+                    box-shadow: 2px 2px 5px #52a957;
+                    cursor: pointer;
                 }
             }
         }

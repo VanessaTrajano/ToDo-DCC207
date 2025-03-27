@@ -1,5 +1,4 @@
 .todo-container {
-  background-color: blue;
   width: 100%;
   height: auto;
   padding: 30px;
@@ -10,7 +9,7 @@
 
   .input-container {
     width: 25%;
-    height: 4vh;
+    height: 4.5vh;
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 20px;
@@ -21,12 +20,16 @@
     }
 
     button {
-      width: 4vh;
+      width: 4.5vh;
+      background-color: #2E7D32;
+      border: none;
+      border-radius: 5px;
+      color: #80CBC4;
+      font-size: 2vh;
     }
   }
 
   .tasks-container {
-    background-color: green;
     width: 50%;
     display: flex;
     flex-direction: column;

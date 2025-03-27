@@ -5,5 +5,9 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Agu Display", serif;
-    color: #fff;
+    color: #2E7D32;
+}
+
+body{
+    background-color:  #80CBC4;
 }
